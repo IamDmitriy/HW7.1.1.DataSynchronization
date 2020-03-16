@@ -1,4 +1,9 @@
 <resources>
     <string name="app_name">HW7.1.1.DataSynchronization</string>
     <string name="synchronization">Сихронизация</string>
+    <string name="afternoon">Afternoon</string>
+    <string name="evening">Evening</string>
+    <string name="morning">Morning</string>
+    <string name="start">Запуск</string>
+    <string name="toast_start">Синхронизация с сервером запущена!</string>
 </resources>

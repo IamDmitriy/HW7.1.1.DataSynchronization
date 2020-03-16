@@ -34,12 +34,20 @@ public class MainActivity extends AppCompatActivity {
 
                 GregorianCalendar morningEnd = new GregorianCalendar();
                 morningEnd.set(curYear, curMonth, curDay, 14, 0);
-                //TODO дописать остальные границы
 
-                //TODO проверка условия
-                if (now.compareTo(morningStart) > 0 && now.compareTo(morningEnd) < 0) {
+                GregorianCalendar afternoonEnd = new GregorianCalendar();
+                afternoonEnd.set(curYear, curMonth, curDay, 15, 0);
+
+                if (now.compareTo(morningStart) >= 0 && now.compareTo(morningEnd) < 0) {
                     intent.setData(Uri.parse("http://morning"));
+                } else if (now.compareTo(morningEnd) >= 0 && now.compareTo(afternoonEnd) < 0) {
+                    intent.setData(Uri.parse("http://afternoon"));
+                } else {
+                    intent.setData(Uri.parse("http://evening"));
                 }
+
+                startActivity(intent);
+
             }
         });
     }

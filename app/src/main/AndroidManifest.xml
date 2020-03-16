@@ -9,6 +9,43 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".EveningActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.SYNC" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="evening"
+                    android:scheme="http" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".MorningActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.SYNC" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="morning"
+                    android:scheme="http" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".AfternoonActivity">
+
+            <intent-filter>
+                <action android:name="android.intent.action.SYNC" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="afternoon"
+                    android:scheme="http" />
+            </intent-filter>
+        </activity>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
